@@ -3,8 +3,14 @@ import { useEffect, useState } from "react";
 
 import Pokemon from "../components/atoms/Pokemon/Pokemon";
 import { capitalize } from "../utils";
-import { getMovesNames } from "../pokemonUtils";
+import { getMovesNames, getStatsHtml, getTypesNames } from "../pokemonUtils";
 
+/**
+ * Récupère depuis l'API les données du pokémon précisé dans le slug (dans l'URL)
+ * puis affiche ces données sur la page.
+ * 
+ * @returns Informations du pokémon 
+ */
 const PokemonData = () => {
     const { slug } = useParams();
     const [isLoading, setLoading] = useState(true);
@@ -32,12 +38,6 @@ const PokemonData = () => {
 
     if (hasError) return <p>Le pokémon <em>{slug}</em> n'existe pas.</p>;
 
-    //let name = capitalize(data.name);
-    // let picture = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + data.id + '.png';
-    // let weight = data.weight / 10;
-    // let height = data.height * 10;
-    // let moves = data.moves;
-
     return (
         <>
             {
@@ -48,8 +48,8 @@ const PokemonData = () => {
                     weight={data.weight / 10}
                     height={data.height * 10}
                     moves={getMovesNames(data.moves)} 
-                    stats="{}" 
-                    types="{}" 
+                    stats={getStatsHtml(data.stats)}
+                    types={getTypesNames(data.types)}
                 />
             }
         </>
