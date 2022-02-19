@@ -3,11 +3,9 @@ import { Route, Routes } from "react-router-dom";
 
 import './styles/App.css';
 
-import { Link } from "./components/atoms";
-
 import Home from "./containers/Home";
-import TestAPI from './containers/TestAPI';
 import PokemonData from "./containers/PokemonData";
+import Favoris from "./containers/Favoris";
 
 class App extends Component {
   render() {
@@ -20,7 +18,7 @@ class App extends Component {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:slug" element={<PokemonData />} />
-            <Route path="testapi" element={<TestAPI />} />
+            <Route path="favoris" element={<Favoris />} />
             <Route path="*" element={<p>404 : Page non trouvée</p>} />
           </Routes>
         </main>
