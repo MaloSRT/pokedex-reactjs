@@ -42,5 +42,5 @@ export const getStatsHtml = (stats) => {
         //statsUl += stats[i].stat.name + ' : ' + stats[i].base_stat;
         statsUl = <>{statsUl}<li>{stats[i].stat.name + ' : ' + stats[i].base_stat}</li></>;
     }
-    return <ul>{statsUl}</ul>;
+    return <ul className="stats">{statsUl}</ul>;
 }

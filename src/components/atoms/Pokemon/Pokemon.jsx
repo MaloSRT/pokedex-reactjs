@@ -1,3 +1,5 @@
+import "./Pokemon.css";
+
 /**
  * Retourne l'affichage d'un pokémon
  * 
@@ -13,17 +15,17 @@
 const Pokemon = (
     { name, picture, weight, height, moves, stats, types }
 ) => (
-    <div className="pokemon_details">
+    <div className="pokemon-details">
         <div className="description">
             <h2>{name}</h2>
             <p>Poids : {weight} kg</p>
             <p>Taille : {height} cm</p>
             <p>Type : {types.join(', ')}</p>
             <p>3 premières capacités : {moves.join(', ')}</p>
-            <p>Stats : </p>
+            <p className="stats-label">Stats : </p>
             {stats}
         </div>
-        <img src={picture} alt={name} />
+        <img src={picture} alt={name} className="picture" />
     </div>
 );
 

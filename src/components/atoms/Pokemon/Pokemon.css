@@ -1,0 +1,16 @@
+.pokemon-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.picture {
+    height: min-content;
+}
+
+.stats-label {
+    margin-bottom: 5px;
+}
+
+.stats {
+    margin-top: 0;
+}
