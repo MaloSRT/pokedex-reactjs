@@ -8,7 +8,7 @@
  * @param {Array} moves Liste des capacités
  * @param {Array} stats Liste des statistiques
  * @param {Array} types Liste des types
- * @returns 
+ * @returns Affichage des informations du pokémon
  */
 const Pokemon = (
     { name, picture, weight, height, moves, stats, types }

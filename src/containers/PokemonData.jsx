@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Pokemon from "../components/atoms/Pokemon/Pokemon";
+import { capitalize } from "../utils";
 
 const PokemonData = () => {
     const { slug } = useParams();
@@ -30,8 +31,8 @@ const PokemonData = () => {
 
     if (hasError) return <p>Le pokémon <em>{slug}</em> n'existe pas.</p>;
 
-    let name = data.name;
-    let picture = '';
+    let name = capitalize(data.name);
+    let picture = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + data.id + '.png';
     let weight = data.weight / 10;
     let height = data.height * 10;
 
