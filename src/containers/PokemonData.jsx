@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import Pokemon from "../components/atoms/Pokemon/Pokemon";
 import { capitalize } from "../utils";
+import { getMovesNames } from "../pokemonUtils";
 
 const PokemonData = () => {
     const { slug } = useParams();
@@ -31,14 +32,26 @@ const PokemonData = () => {
 
     if (hasError) return <p>Le pokémon <em>{slug}</em> n'existe pas.</p>;
 
-    let name = capitalize(data.name);
-    let picture = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + data.id + '.png';
-    let weight = data.weight / 10;
-    let height = data.height * 10;
+    //let name = capitalize(data.name);
+    // let picture = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + data.id + '.png';
+    // let weight = data.weight / 10;
+    // let height = data.height * 10;
+    // let moves = data.moves;
 
     return (
         <>
-            {isLoading ? <p>Chargement...</p> : <Pokemon name={name} picture={picture} weight={weight} height={height} moves="{}" stats="{}" types="{}" />}
+            {
+                isLoading ? <p>Chargement...</p> :
+                <Pokemon 
+                    name={capitalize(data.name)}
+                    picture={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + data.id + '.png'}
+                    weight={data.weight / 10}
+                    height={data.height * 10}
+                    moves={getMovesNames(data.moves)} 
+                    stats="{}" 
+                    types="{}" 
+                />
+            }
         </>
     );
 };

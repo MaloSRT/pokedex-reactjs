@@ -18,6 +18,7 @@ const Pokemon = (
             <h2>{name}</h2>
             <p>Poids : {weight} kg</p>
             <p>Taille : {height} cm</p>
+            <p>3 premières capacités : {moves.join(', ')}</p>
         </div>
         <img src={picture} alt={name} />
     </div>
