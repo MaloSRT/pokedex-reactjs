@@ -1,3 +1,5 @@
 import Link from "./Link/Links";
+import Pokemon from "./Pokemon/Pokemon";
+import FavorisButton from "./FavorisButton/FavorisButton";
 
-export { Link };
+export { Link, Pokemon, FavorisButton };

@@ -1,3 +1,5 @@
+import FavorisButton from "../FavorisButton/FavorisButton";
+
 import "./Pokemon.css";
 
 /**
@@ -25,7 +27,10 @@ const Pokemon = (
             <p className="stats-label">Stats : </p>
             {stats}
         </div>
-        <img src={picture} alt={name} className="picture" />
+        <div className="illustration">
+            <img src={picture} alt={name} className="picture" />
+            <FavorisButton />
+        </div>
     </div>
 );
 
