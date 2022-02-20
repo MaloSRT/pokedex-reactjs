@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import { Pokemon } from "../components/atoms";
+import { Pokemon, Loader } from "../components/atoms";
 import { capitalize, slugify } from "../utils";
 import { getMovesNames, getStatsHtml, getTypesNames } from "../pokemonUtils";
 
@@ -41,7 +41,7 @@ const PokemonData = () => {
     return (
         <>
             {
-                isLoading ? <p>Chargement...</p> :
+                isLoading ? <Loader /> :
                 <Pokemon
                     id={data.id}
                     name={capitalize(data.name)}
