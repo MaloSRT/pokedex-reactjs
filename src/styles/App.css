@@ -73,7 +73,12 @@ nav a:hover {
   color: #4a69bd;
 }
 
-button {
+h2 {
+  margin-top: 0;
+}
+
+button, input[type="submit"] {
+  width: max-content;
   color: #FFF;
   background-color: #4a69bd;
   text-decoration: none;
@@ -93,6 +98,7 @@ button {
 .favoris-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 25px;
 }
 
 .favoris-item {
@@ -113,4 +119,20 @@ button {
 .favoris-item p {
   color: #fff;
   font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  background-color: #EEE;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  font-family: sans-serif;
+  font-size: 14px;
 }

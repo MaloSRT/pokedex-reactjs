@@ -8,6 +8,7 @@ import { Link } from "./components/atoms"
 import Home from "./containers/Home";
 import PokemonData from "./containers/PokemonData";
 import Favoris from "./containers/Favoris";
+import Contact from "./containers/Contact";
 
 class App extends Component {
   render() {
@@ -23,6 +24,9 @@ class App extends Component {
               <li>
                 <Link to="/favoris">Favoris</Link>
               </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </nav>
         </header>
@@ -31,6 +35,7 @@ class App extends Component {
             <Route path="/" element={<Home />} />
             <Route path="/:slug" element={<PokemonData />} />
             <Route path="favoris" element={<Favoris />} />
+            <Route path="contact" element={<Contact />} />
             <Route path="*" element={<p>404 : Page non trouvée</p>} />
           </Routes>
         </main>

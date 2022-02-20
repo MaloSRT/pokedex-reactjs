@@ -13,7 +13,7 @@ const Favoris = () => {
 
     return (
         <>
-            <h1>Favoris</h1>
+            <h2>Favoris</h2>
             <div className="favoris-list">
                 {data.length > 0 ?
                     data.map((pokemon, index) => (
