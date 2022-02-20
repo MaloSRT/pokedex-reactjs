@@ -19,7 +19,7 @@ const Home = () => {
             <h2>Rechercher un pokémon</h2>
             <form className="inline" onSubmit={handleSubmit}>
                 <input type="text" id="search-field" name="search" placeholder="Recherche..." autoFocus />
-                <input type="submit" id="search-btn" value="Recherche..." />
+                <input type="submit" id="search-btn" value="Rechercher" />
             </form>
             
         </>
