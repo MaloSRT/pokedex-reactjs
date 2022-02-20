@@ -7,11 +7,24 @@ import { useState } from "react";
  */
 const Favoris = () => {
 
-    const [data, setData] = useState(
+    const [data] = useState(
         JSON.parse(localStorage.getItem("favoris")) || []
     );
 
-    return <h1>Favoris</h1>;
+    return (
+        <>
+            <h1>Favoris</h1>
+            <div className="favoris-list">
+                {data.map((pokemon, index) => (
+                    <div className="favoris-item">
+                        <img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokemon.id + '.png'} alt={pokemon.name} />
+                        <p>{pokemon.name}</p>
+                    </div>
+                ))}
+            </div>
+        </>
+        
+    );
 };
   
 export default Favoris;

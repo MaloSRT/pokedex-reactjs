@@ -7,7 +7,6 @@ import "./Pokemon.css";
  * 
  * @param {number} id Identifiant du pokémon
  * @param {string} name Nom du pokémon
- * @param {string} picture URL de l'image du pokémon
  * @param {number} weight Poids en kg
  * @param {number} height Taille en cm
  * @param {Array} moves Liste des capacités
@@ -16,7 +15,7 @@ import "./Pokemon.css";
  * @returns Affichage des informations du pokémon
  */
 const Pokemon = (
-    { id, name, picture, weight, height, moves, stats, types }
+    { id, name, weight, height, moves, stats, types }
 ) => (
     <div className="pokemon-details">
         <div className="description">
@@ -29,9 +28,8 @@ const Pokemon = (
             {stats}
         </div>
         <div className="illustration">
-            <img src={picture} alt={name} className="picture" />
+            <img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + id + '.png'} alt={name} className="picture" />
             <FavorisButton id={id} name={name} />
-            <p>id : {id}</p>
         </div>
     </div>
 );
