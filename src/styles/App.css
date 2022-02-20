@@ -47,3 +47,28 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.favoris-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.favoris-item {
+  width: 120px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #30a7d7;
+  box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 2px;
+  text-decoration: unset;
+}
+
+.favoris-item p {
+  color: #fff;
+  font-weight: bold;
+}
