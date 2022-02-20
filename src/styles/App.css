@@ -48,6 +48,12 @@ button {
   cursor: pointer;
 }
 
+#fav-btn {
+  min-width: 160px;
+  display: flex;
+  justify-content: center;
+}
+
 .favoris-list {
   display: flex;
   flex-wrap: wrap;
