@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Pokemon from "../components/atoms/Pokemon/Pokemon";
-import { capitalize } from "../utils";
+import { capitalize, slugify } from "../utils";
 import { getMovesNames, getStatsHtml, getTypesNames } from "../pokemonUtils";
 
 /**
@@ -20,7 +20,7 @@ const PokemonData = () => {
     const fetchApi = async () => {
         try {
             const response = await fetch(
-                "https://pokeapi.co/api/v2/pokemon/" + slug
+                "https://pokeapi.co/api/v2/pokemon/" + slugify(slug)
             );
             const data = await response.json();
 
