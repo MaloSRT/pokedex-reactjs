@@ -1,10 +1,11 @@
-import FavorisButton from "../FavorisButton/FavorisButton";
+import FavorisButton from "../../../containers/FavorisButton";
 
 import "./Pokemon.css";
 
 /**
  * Retourne l'affichage d'un pokémon
  * 
+ * @param {number} id Identifiant du pokémon
  * @param {string} name Nom du pokémon
  * @param {string} picture URL de l'image du pokémon
  * @param {number} weight Poids en kg
@@ -15,7 +16,7 @@ import "./Pokemon.css";
  * @returns Affichage des informations du pokémon
  */
 const Pokemon = (
-    { name, picture, weight, height, moves, stats, types }
+    { id, name, picture, weight, height, moves, stats, types }
 ) => (
     <div className="pokemon-details">
         <div className="description">
@@ -29,7 +30,8 @@ const Pokemon = (
         </div>
         <div className="illustration">
             <img src={picture} alt={name} className="picture" />
-            <FavorisButton />
+            <FavorisButton id={id} name={name} />
+            <p>id : {id}</p>
         </div>
     </div>
 );

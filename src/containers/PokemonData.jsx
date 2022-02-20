@@ -42,7 +42,8 @@ const PokemonData = () => {
         <>
             {
                 isLoading ? <p>Chargement...</p> :
-                <Pokemon 
+                <Pokemon
+                    id={data.id}
                     name={capitalize(data.name)}
                     picture={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + data.id + '.png'}
                     weight={data.weight / 10}
