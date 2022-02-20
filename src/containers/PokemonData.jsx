@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import Pokemon from "../components/atoms/Pokemon/Pokemon";
+import { Pokemon } from "../components/atoms";
 import { capitalize, slugify } from "../utils";
 import { getMovesNames, getStatsHtml, getTypesNames } from "../pokemonUtils";
 

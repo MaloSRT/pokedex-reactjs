@@ -21,11 +21,6 @@ body {
   padding: 25px 0 50px 0;
 }
 
-h1 {
-  font-size: 2em;
-  margin-top: 10px;
-}
-
 .App-main {
   width: 80%;
   min-width: 300px;
@@ -35,6 +30,47 @@ h1 {
   margin: 25px 25px 0 25px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 2px;
+}
+
+header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  flex-grow: 1;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+nav {
+  flex-grow: 2;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  list-style: none;
+  margin-left: 15px;
+}
+
+nav a {
+  color: #555;
+  text-decoration: none;
+  transition: color 450ms ease;
+}
+
+nav a.active {
+  border-bottom: 2px #4a69bd solid;
+}
+
+nav a:hover {
+  color: #4a69bd;
 }
 
 button {

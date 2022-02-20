@@ -12,10 +12,7 @@ const Link = ({ to, ...props }) => {
         <RouterLink
             to={to}
             {...props}
-            style={{
-                color: "white",
-                textDecoration: match ? "underline" : "none",
-            }}
+            className={ match ? "active" : "" }
         />
     );
 
